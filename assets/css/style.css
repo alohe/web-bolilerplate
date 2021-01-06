@@ -1,0 +1,8 @@
+/* Focusing the button with a keyboard will show a dashed black line. */
+button:focus {
+  outline: none;
+}
+
+input, optgroup, select, textarea:focus{
+  outline: none;
+}
