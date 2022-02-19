@@ -1,8 +1,212 @@
+@font-face {
+  font-family: "Var Bold";
+  src: url("fonts/VarentGrotesk-Bold.otf");
+}
+
+@font-face {
+  font-family: "Var Light";
+  src: url("fonts/VarentGrotesk-ExtLtIta.otf");
+}
+
+
+@font-face {
+  font-family: "Gro B";
+  src: url("fonts/GroBold.ttf");
+}
+
+@font-face {
+  font-family: "Gro H";
+  src: url("fonts/Gro-Heavy.ttf");
+}
+
+@font-face {
+  font-family: "Gro M";
+  src: url("fonts/Gro-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Gro R";
+  src: url("fonts/Gro-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Gro S";
+  src: url("fonts/Gro-SemiBold.ttf");
+}
+
+
+@font-face {
+  font-family: "Euc S";
+  src: url("fonts/Euclid Circular A SemiBold.ttf");
+}
+@font-face {
+  font-family: "Euc b";
+  src: url("fonts/Euclid Circular A Bold.ttf");
+}
+
+:root {
+  --primary: #5627ff;
+  --primary-light: #ece8ff;
+  --success: #3dbc4e; 
+
+
+  --pink: #ff4088;
+  --pink-dark: #ff1c72;
+  --pink-light: #ff649e;
+  --gray0: #f8f8f8;
+  --gray1: #dbe1e8;
+  --gray2: #e7e7df;
+  --gray3: #6c7983;
+  --gray4: #454e56;
+  --gray5: #2a2e35;
+  --gray6: #12181b;
+
+  --dark: #000000;
+}
+
 /* Focusing the button with a keyboard will show a dashed black line. */
 button:focus {
   outline: none;
 }
 
-input, optgroup, select, textarea:focus{
+input,
+optgroup,
+select,
+textarea:focus {
   outline: none;
+}
+
+html {
+  font-family: "Inter";
+  overflow-x: hidden;
+}
+
+body {
+  border-radius: 50px;
+  font-family: "Inter";
+}
+
+body::-webkit-scrollbar {
+  width: 0.8em;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--light-0);
+  padding-right: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--dark);
+  border-radius: 50px;
+  border: solid 2px white;
+}
+
+body::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+
+.logo{
+  border-radius: 50px;
+  width: 60px;
+  height: 60px;
+  animation: 2s pulse infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--dark);
+  }
+  100% {
+    box-shadow: 0 0 0 20px white;
+  }
+}
+
+
+.t-pri{
+  color: var(--primary);
+}
+
+.dollar{
+  font-family: "Inter";
+}
+
+.hor{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-family: "Gro H";
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 56px;
+  text-transform: capitalize;
+}
+
+.package {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+
+.package .name {
+  font-size: 19px;
+  font-weight: 700;
+  font-family: "Euc b";
+}
+
+.package .desc {
+  color: #05060f;
+  margin-top: 20px;
+}
+
+.package .price {
+  font-weight: 700;
+  font-family: "Gro H";
+  font-size: 60px;
+  padding-top: 10px;
+}
+
+.package button{
+  bottom: 0;
+  border: none;
+  border-radius: 10px;
+  height: 50px;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  transition: 0.6s;
+}
+
+.package button:hover{
+  background-color: var(--primary); 
+}
+
+.most{
+  border: solid 2px var(--primary);
+  border-radius: 20px;
+}
+
+.most button{
+  background: var(--primary);
+}
+.most button:hover{
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.note{
+  font-family: "Inter";
+  font-weight: 400;
+  color: var(--dark);
+  line-height: 15px;
+  font-size: 13px;
 }
